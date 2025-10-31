@@ -4,7 +4,7 @@ mailUpField = document.querySelector("#registerEmail");
 passUpField = document.querySelector("#registerPassword");
 
 registerBtn.addEventListener("click", () => {
-  fetch("http://localhost:3000/users/signup", {
+  fetch("https://weather-back-theta.vercel.app/users/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -27,7 +27,7 @@ passInField = document.querySelector("#connectionPassword");
 
 connectBtn.addEventListener("click", () => {
   console.log(mailInField.value, passInField.value);
-  fetch("http://localhost:3000/users/signin", {
+  fetch("https://weather-back-theta.vercel.app/users/signin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
